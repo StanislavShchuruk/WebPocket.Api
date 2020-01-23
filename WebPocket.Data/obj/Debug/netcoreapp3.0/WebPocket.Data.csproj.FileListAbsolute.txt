@@ -1,0 +1,10 @@
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\bin\Debug\netcoreapp3.0\WebPocket.Data.deps.json
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\bin\Debug\netcoreapp3.0\WebPocket.Data.dll
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\obj\Debug\netcoreapp3.0\WebPocket.Data.csprojAssemblyReference.cache
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\obj\Debug\netcoreapp3.0\WebPocket.Data.AssemblyInfoInputs.cache
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\obj\Debug\netcoreapp3.0\WebPocket.Data.AssemblyInfo.cs
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\bin\Debug\netcoreapp3.0\WebPocket.Data.pdb
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\obj\Debug\netcoreapp3.0\WebPocket.Data.dll
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\obj\Debug\netcoreapp3.0\WebPocket.Data.pdb
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\bin\Debug\netcoreapp3.0\WebPocket.Data.runtimeconfig.json
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Data\bin\Debug\netcoreapp3.0\WebPocket.Data.runtimeconfig.dev.json

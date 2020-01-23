@@ -1,0 +1,15 @@
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\bin\Debug\netcoreapp3.0\WebPocket.Data.dll
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\obj\Debug\netcoreapp3.0\WebPocket.Repo.csprojAssemblyReference.cache
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\obj\Debug\netcoreapp3.0\WebPocket.Repo.AssemblyInfoInputs.cache
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\obj\Debug\netcoreapp3.0\WebPocket.Repo.AssemblyInfo.cs
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\bin\Debug\netcoreapp3.0\WebPocket.Repo.deps.json
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\bin\Debug\netcoreapp3.0\WebPocket.Repo.dll
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\bin\Debug\netcoreapp3.0\WebPocket.Repo.pdb
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\bin\Debug\netcoreapp3.0\WebPocket.Common.dll
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\bin\Debug\netcoreapp3.0\WebPocket.Common.pdb
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\bin\Debug\netcoreapp3.0\WebPocket.Data.pdb
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\obj\Debug\netcoreapp3.0\WebPocket.Repo.csproj.CopyComplete
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\obj\Debug\netcoreapp3.0\WebPocket.Repo.dll
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\obj\Debug\netcoreapp3.0\WebPocket.Repo.pdb
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\bin\Debug\netcoreapp3.0\WebPocket.Repo.runtimeconfig.json
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Repo\bin\Debug\netcoreapp3.0\WebPocket.Repo.runtimeconfig.dev.json

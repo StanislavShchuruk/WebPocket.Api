@@ -1,0 +1,8 @@
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Common\bin\Debug\netstandard2.0\WebPocket.Common.deps.json
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Common\bin\Debug\netstandard2.0\WebPocket.Common.dll
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Common\obj\Debug\netstandard2.0\WebPocket.Common.csprojAssemblyReference.cache
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Common\obj\Debug\netstandard2.0\WebPocket.Common.AssemblyInfoInputs.cache
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Common\obj\Debug\netstandard2.0\WebPocket.Common.AssemblyInfo.cs
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Common\bin\Debug\netstandard2.0\WebPocket.Common.pdb
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Common\obj\Debug\netstandard2.0\WebPocket.Common.dll
+C:\Projects\MyProjects\WebPocket.Server\WebPocket.Common\obj\Debug\netstandard2.0\WebPocket.Common.pdb
