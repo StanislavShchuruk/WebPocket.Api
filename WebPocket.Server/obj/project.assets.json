@@ -2797,7 +2797,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.AspNetCore.Http": "2.2.2",
-          "Microsoft.Extensions.Configuration.Json": "3.0.0"
+          "Microsoft.Extensions.Configuration.Json": "3.0.0",
+          "Microsoft.Extensions.Logging.Debug": "3.0.0"
         },
         "compile": {
           "bin/placeholder/WebPocket.Common.dll": {}

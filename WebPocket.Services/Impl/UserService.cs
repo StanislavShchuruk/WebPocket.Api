@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ using WebPocket.Data.ViewModels.AuthViewModels;
 using WebPocket.Data.ViewModels.AuthViewModels.RequestModels;
 using WebPocket.Services.Interfaces;
 using WebPocket.Services.Settings;
+using WebPocket.Common.Logging;
 
 namespace WebPocket.Services.Impl
 {
@@ -21,11 +23,13 @@ namespace WebPocket.Services.Impl
     {
         private readonly UserManager<User> _userManager;
         private readonly JwtSettings _jwtSettings;
+        private readonly ILogger _logger;
 
-        public UserService(UserManager<User> userManager, JwtSettings jwtSettings)
+        public UserService(UserManager<User> userManager, JwtSettings jwtSettings, ILoggerFactory loggerFactory)
         {
             _userManager = userManager;
             _jwtSettings = jwtSettings;
+            _logger = loggerFactory.CreateLogger(GetType());
         }
 
         public async Task<RequestResult<UserViewModel>> RegisterAsync(RegisterUserRequestModel registerModel)
@@ -57,6 +61,7 @@ namespace WebPocket.Services.Impl
             catch (Exception ex)
             {
                 result.SetInternalServerError();
+                _logger.LogException(ex);
             }
 
             return result;
@@ -87,6 +92,7 @@ namespace WebPocket.Services.Impl
             catch (Exception ex)
             {
                 result.SetInternalServerError();
+                _logger.LogException(ex);
             }
 
             return result;
@@ -113,6 +119,7 @@ namespace WebPocket.Services.Impl
             catch (Exception ex)
             {
                 result.SetInternalServerError();
+                _logger.LogException(ex);
             }
 
             return result;
