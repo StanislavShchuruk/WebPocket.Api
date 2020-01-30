@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
 using WebPocket.Data.Entities.AuthEntities;
+using WebPocket.Data.Entities.PocketEntities;
+using WebPocket.Repo.DbContexts.EntityConfigurations;
 using WebPocket.Repo.Extensions;
 
 namespace WebPocket.Repo.DbContexts
@@ -19,9 +21,11 @@ namespace WebPocket.Repo.DbContexts
                 
         }
 
+        public DbSet<Pocket> Pockets { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            MapEntities(modelBuilder);
+            ApplyEntitiesConfigurations(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
 
@@ -33,8 +37,9 @@ namespace WebPocket.Repo.DbContexts
             return await base.SaveChangesAsync(acceptAllChangeOnSuccess, cancellationToken);
         }
 
-        protected void MapEntities(ModelBuilder modelBuilder)
+        protected void ApplyEntitiesConfigurations(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration<Pocket>(new PocketConfiguration());
         }
     }
 }
