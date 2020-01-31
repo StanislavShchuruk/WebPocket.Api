@@ -14,7 +14,9 @@ namespace WebPocket.Web.Installers
         public void InstallServices(IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IUnitOfWork<AppDbContext>, UnitOfWork<AppDbContext>>();
+
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IPocketService, PocketService>();
         }
     }
 }
