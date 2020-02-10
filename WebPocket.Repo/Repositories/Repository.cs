@@ -21,6 +21,21 @@ namespace WebPocket.Repo.Repositories
             _entities = context.Set<T>();
         }
 
+        public IQueryable<T> AsQueryable()
+        {
+            return _entities.AsQueryable();
+        }
+
+        public IEnumerable<T> AsEnumerable()
+        {
+            return _entities.AsEnumerable();
+        }
+
+        public IAsyncEnumerable<T> AsAsyncEnumerable()
+        {
+            return _entities.AsAsyncEnumerable();
+        }
+
         public async Task<List<T>> GetAllAsync()
         {
             return await _entities.ToListAsync();
@@ -30,7 +45,7 @@ namespace WebPocket.Repo.Repositories
             return await _entities.SingleOrDefaultAsync(e => e.Id == id);
         }
 
-        public T Insert(T entity)
+        public T Create(T entity)
         {
             if (entity == null) 
             {

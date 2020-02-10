@@ -4,24 +4,24 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebPocket.Data.Entities;
+using WebPocket.Repo.DbContexts;
 using WebPocket.Repo.Repositories;
 
 namespace WebPocket.Repo.UnitOfWork
 {
-    public class UnitOfWork<TContext> : IUnitOfWork<TContext>, IDisposable
-        where TContext : DbContext, new()
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        private readonly TContext _context;
+        private readonly AppDbContext _context;
         private string _errorMessage = string.Empty;
         private IDbContextTransaction _transaction;
         private Dictionary<string, object> _repositories = new Dictionary<string, object>();
 
         public UnitOfWork()
         {
-            _context = new TContext();
+            _context = new AppDbContext();
         }
 
-        public TContext Context => _context;
+        public AppDbContext Context => _context;
 
         public Repository<TEntity> Repository<TEntity>() where TEntity : BaseClass
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebPocket.Data.Entities.AuthEntities;
@@ -13,7 +14,7 @@ namespace WebPocket.Web.Installers
     {
         public void InstallServices(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IUnitOfWork<AppDbContext>, UnitOfWork<AppDbContext>>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IPocketService, PocketService>();

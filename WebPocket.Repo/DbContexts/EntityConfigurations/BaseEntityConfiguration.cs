@@ -4,7 +4,7 @@ using WebPocket.Data.Entities;
 
 namespace WebPocket.Repo.DbContexts.EntityConfigurations
 {
-    public class BaseEntityConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : class, IEntity
+    public abstract class BaseEntityConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : class, IEntity
     {
         public virtual void Configure(EntityTypeBuilder<TEntity> builder)
         {

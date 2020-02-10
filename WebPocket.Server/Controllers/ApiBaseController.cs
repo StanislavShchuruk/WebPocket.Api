@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using System.Security.Claims;
 using WebPocket.Common.RequestResult;
 
 namespace WebPocket.Web.Controllers
@@ -11,6 +12,14 @@ namespace WebPocket.Web.Controllers
     [Route("api/[controller]")]
     public abstract class ApiBaseController : Controller
     {
+        protected string UserId 
+        { 
+            get 
+            { 
+                return HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier); 
+            }
+        }
+
         public override void OnActionExecuting(ActionExecutingContext context)
         {
         }

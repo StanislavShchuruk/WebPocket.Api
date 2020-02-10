@@ -7,9 +7,9 @@ namespace WebPocket.Services.Interfaces
 {
     public interface IPocketService
     {
-        public Task<RequestResult<PocketViewModel>> CreateAsync(string name);
-        public Task<RequestResult<PocketViewModel>> RenameAsync(int id, string name);
-        public Task<RequestResult> DeleteAsync(int id);
-        public Task<RequestResult<List<PocketViewModel>>> GetAllAsync();
+        public Task<RequestResult<PocketViewModel>> CreateAsync(string name, string userId);
+        public Task<RequestResult<PocketViewModel>> RenameAsync(int id, string name, string userId);
+        public Task<RequestResult> DeleteAsync(int id, string userId);
+        public Task<RequestResult<List<PocketViewModel>>> GetAllAsync(string userId);
     }
 }
