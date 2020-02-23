@@ -1,10 +1,12 @@
-﻿using WebPocket.Data.Entities.PocketEntities;
+﻿using System.ComponentModel.DataAnnotations;
+using WebPocket.Data.Entities.PocketEntities;
 
 namespace WebPocket.Data.ViewModels.PocketViewModels
 {
     public class PocketViewModel
     {
         public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
         public PocketViewModel SetFrom(Pocket entity)
         {

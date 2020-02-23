@@ -11,11 +11,6 @@ namespace WebPocket.Repo.DbContexts
 {
     public class AppDbContext : IdentityDbContext<User, Role, string>
     {
-        public AppDbContext()
-        {
-
-        }
-
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
                 

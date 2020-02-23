@@ -14,6 +14,8 @@ namespace WebPocket.Web.Installers
     {
         public void InstallServices(IServiceCollection services, IConfiguration configuration)
         {
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddTransient<IUserService, UserService>();

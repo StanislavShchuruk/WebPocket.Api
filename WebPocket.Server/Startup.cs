@@ -34,6 +34,7 @@ namespace WebPocket.Server
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
             app.UseRouting();
             app.UseCors("CorsPolicy");
             app.UseAuthorization();

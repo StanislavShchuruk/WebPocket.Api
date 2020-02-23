@@ -23,16 +23,15 @@ namespace WebPocket.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<RequestResult<PocketViewModel>> CreateAsync(string name)
+        public async Task<RequestResult<PocketViewModel>> CreateAsync([FromBody] PocketViewModel pocket)
         {
-            return await _pocketService.CreateAsync(name, UserId);
+            return await _pocketService.CreateAsync(pocket.Name, UserId);
         }
 
         [HttpPut]
-        [Route("{id}")]
-        public async Task<RequestResult<PocketViewModel>> RenameAsync(int id, string name)
+        public async Task<RequestResult<PocketViewModel>> RenameAsync([FromBody] PocketViewModel pocket)
         {
-            return await _pocketService.RenameAsync(id, name, UserId);
+            return await _pocketService.RenameAsync(pocket.Id, pocket.Name, UserId);
         }
 
         [HttpDelete]

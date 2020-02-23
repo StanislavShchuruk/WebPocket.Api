@@ -16,9 +16,9 @@ namespace WebPocket.Repo.UnitOfWork
         private IDbContextTransaction _transaction;
         private Dictionary<string, object> _repositories = new Dictionary<string, object>();
 
-        public UnitOfWork()
+        public UnitOfWork(AppDbContext context)
         {
-            _context = new AppDbContext();
+            _context = context;
         }
 
         public AppDbContext Context => _context;

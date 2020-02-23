@@ -13,6 +13,8 @@ namespace WebPocket.Repo.DbContexts.EntityConfigurations
                 .WithMany(u => u.Pockets)
                 .HasForeignKey(p => p.UserId)
                 .IsRequired();
+
+            builder.Property(p => p.Name).IsRequired();
         }
     }
 }
