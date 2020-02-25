@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
 
-namespace WebPocket.Common.RequestResult
+namespace WebPocket.Services.RequestResults
 {
     public class RequestResult
     {

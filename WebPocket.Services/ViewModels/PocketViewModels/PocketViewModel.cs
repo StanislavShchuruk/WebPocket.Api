@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using WebPocket.Data.Entities.PocketEntities;
 
-namespace WebPocket.Data.ViewModels.PocketViewModels
+namespace WebPocket.Services.ViewModels.PocketViewModels
 {
     public class PocketViewModel
     {

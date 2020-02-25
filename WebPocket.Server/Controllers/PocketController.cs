@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebPocket.Common.RequestResult;
-using WebPocket.Data.ViewModels.PocketViewModels;
+using WebPocket.Services.RequestResults;
+using WebPocket.Services.ViewModels.PocketViewModels;
 using WebPocket.Services.Interfaces;
 
 namespace WebPocket.Web.Controllers
@@ -17,20 +17,28 @@ namespace WebPocket.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<RequestResult<List<PocketViewModel>>> GetAllAsync()
+        public async Task<RequestResult<IEnumerable<PocketViewModel>>> GetAllAsync()
         {
             return await _pocketService.GetAllAsync(UserId);
         }
 
         [HttpPost]
-        public async Task<RequestResult<PocketViewModel>> CreateAsync([FromBody] PocketViewModel pocket)
+        public async Task<RequestResult> CreateAsync([FromBody] PocketViewModel pocket)
         {
+            if (!ModelState.IsValid)
+            {
+                return GetModelStateErrorsRequestResult();
+            }
             return await _pocketService.CreateAsync(pocket.Name, UserId);
         }
 
         [HttpPut]
-        public async Task<RequestResult<PocketViewModel>> RenameAsync([FromBody] PocketViewModel pocket)
+        public async Task<RequestResult> RenameAsync([FromBody] PocketViewModel pocket)
         {
+            if (!ModelState.IsValid)
+            {
+                return GetModelStateErrorsRequestResult();
+            }
             return await _pocketService.RenameAsync(pocket.Id, pocket.Name, UserId);
         }
 

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using WebPocket.Common.RequestResult;
-using WebPocket.Data.ViewModels.AuthViewModels.RequestModels;
+using WebPocket.Services.RequestResults;
+using WebPocket.Services.ViewModels.AuthViewModels.RequestModels;
 using WebPocket.Services.Interfaces;
 
 namespace WebPocket.Web.Controllers

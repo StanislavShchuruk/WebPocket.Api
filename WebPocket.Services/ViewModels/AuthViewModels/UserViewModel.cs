@@ -1,6 +1,6 @@
 ﻿using WebPocket.Data.Entities.AuthEntities;
 
-namespace WebPocket.Data.ViewModels.AuthViewModels
+namespace WebPocket.Services.ViewModels.AuthViewModels
 {
     public class UserViewModel
     {

@@ -1,4 +1,4 @@
-﻿namespace WebPocket.Data.ViewModels.AuthViewModels.RequestModels
+﻿namespace WebPocket.Services.ViewModels.AuthViewModels.RequestModels
 {
     public class RegisterUserRequestModel
     {

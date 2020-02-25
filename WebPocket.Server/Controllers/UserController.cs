@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebPocket.Common.RequestResult;
-using WebPocket.Data.ViewModels.AuthViewModels;
+using WebPocket.Services.RequestResults;
+using WebPocket.Services.ViewModels.AuthViewModels;
 using WebPocket.Services.Interfaces;
 
 namespace WebPocket.Web.Controllers
@@ -20,7 +20,7 @@ namespace WebPocket.Web.Controllers
 
         [HttpGet]
         [Route("get-users")]
-        public async Task<RequestResult<List<UserViewModel>>> GetUsersAsync()
+        public async Task<RequestResult<IEnumerable<UserViewModel>>> GetUsersAsync()
         {
             return await _userService.GetUsersAsync();
         }

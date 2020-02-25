@@ -9,10 +9,10 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using WebPocket.Common.RequestResult;
+using WebPocket.Services.RequestResults;
 using WebPocket.Data.Entities.AuthEntities;
-using WebPocket.Data.ViewModels.AuthViewModels;
-using WebPocket.Data.ViewModels.AuthViewModels.RequestModels;
+using WebPocket.Services.ViewModels.AuthViewModels;
+using WebPocket.Services.ViewModels.AuthViewModels.RequestModels;
 using WebPocket.Services.Interfaces;
 using WebPocket.Services.Settings;
 using WebPocket.Common.Logging;
@@ -98,9 +98,9 @@ namespace WebPocket.Services.Impl
             return result;
         }
 
-        public async Task<RequestResult<List<UserViewModel>>> GetUsersAsync()
+        public async Task<RequestResult<IEnumerable<UserViewModel>>> GetUsersAsync()
         {
-            var result = new RequestResult<List<UserViewModel>>();
+            var result = new RequestResult<IEnumerable<UserViewModel>>();
 
             try
             {

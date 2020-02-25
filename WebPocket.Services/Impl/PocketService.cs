@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebPocket.Common.RequestResult;
+using WebPocket.Services.RequestResults;
 using WebPocket.Data.Entities.PocketEntities;
-using WebPocket.Data.ViewModels.PocketViewModels;
+using WebPocket.Services.ViewModels.PocketViewModels;
 using WebPocket.Repo.UnitOfWork;
 using WebPocket.Services.Interfaces;
 using WebPocket.Common.Logging;
@@ -109,9 +109,9 @@ namespace WebPocket.Services.Impl
             return result;
         }
 
-        public async Task<RequestResult<List<PocketViewModel>>> GetAllAsync(string userId)
+        public async Task<RequestResult<IEnumerable<PocketViewModel>>> GetAllAsync(string userId)
         {
-            var result = new RequestResult<List<PocketViewModel>>();
+            var result = new RequestResult<IEnumerable<PocketViewModel>>();
 
             try
             {

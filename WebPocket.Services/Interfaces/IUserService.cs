@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebPocket.Common.RequestResult;
-using WebPocket.Data.Entities.AuthEntities;
-using WebPocket.Data.ViewModels.AuthViewModels;
-using WebPocket.Data.ViewModels.AuthViewModels.RequestModels;
+using WebPocket.Services.RequestResults;
+using WebPocket.Services.ViewModels.AuthViewModels;
+using WebPocket.Services.ViewModels.AuthViewModels.RequestModels;
 
 namespace WebPocket.Services.Interfaces
 {
@@ -11,6 +10,6 @@ namespace WebPocket.Services.Interfaces
     {
         Task<RequestResult<UserViewModel>> RegisterAsync(RegisterUserRequestModel registerUserViewModel);
         Task<RequestResult<UserViewModel>> LoginAsync(LoginUserRequestModel loginModel);
-        Task<RequestResult<List<UserViewModel>>> GetUsersAsync();
+        Task<RequestResult<IEnumerable<UserViewModel>>> GetUsersAsync();
     }
 }
